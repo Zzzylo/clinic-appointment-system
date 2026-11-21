@@ -1,13 +1,11 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Model;
 
-/**
- *
- * @author pc
- */
-public class Schedulable {
+import java.time.LocalDate;
+import java.time.LocalTime;
+
+public interface Schedulable {
+    void reschedule(LocalDate newDate, LocalTime newTime) throws ClinicException;
+    void cancel() throws ClinicException;
+    boolean isActive();
     
 }
